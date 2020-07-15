@@ -10,6 +10,8 @@ First we need to install a fresh Laravel application on the `/src` folder and th
 -  Fresh Laravel app - `cd src && composer create-project laravel/laravel .`
 -  Up and run containers - `docker-compose up -d --build`
 
+Now you should be able to see the Laravel application running at you [Localhost](localhost:8080).
+
 There are three containers that handle Composer, NPM, and Artisan commands without having to have these platforms installed on your local computer. Use the following command templates from your project root, modifiying them to fit your particular use case:
 
 - `docker-compose run --rm composer update`
