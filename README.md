@@ -3,9 +3,12 @@ A pretty simplified docker-compose workflow that sets up a LEMP network of conta
 
 ## Usage
 
-To get started, make sure you have [Docker installed](https://docs.docker.com/docker-for-mac/install/) on your system, and then clone this repository.
+To get started, make sure you have [Docker](https://docs.docker.com/docker-for-mac/install/) and [Composer](https://getcomposer.org/download/) on your system, and then clone this repository.
 
-First run `docker-compose up -d --build`. Open up your browser of choice to [http://localhost:8080](http://localhost:8080) and you should see your Laravel app running as intended. **Your Laravel app needs to be in the src directory first before bringing the containers up, otherwise the artisan container will not build, as it's missing the appropriate file.** 
+First we need to install a fresh Laravel application on the `/src` folder and them get the containers up and running using the commads:
+
+-  Fresh Laravel app - `cd src && composer create-project laravel/laravel .`
+-  Up and run containers - `docker-compose up -d --build`
 
 There are three containers that handle Composer, NPM, and Artisan commands without having to have these platforms installed on your local computer. Use the following command templates from your project root, modifiying them to fit your particular use case:
 
